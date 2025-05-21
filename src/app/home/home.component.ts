@@ -4,7 +4,7 @@ import { AdviceService } from '../advice.service';
 
 @Component({
   selector: 'app-home',
-  imports: [GreetingComponent],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'] 
 })

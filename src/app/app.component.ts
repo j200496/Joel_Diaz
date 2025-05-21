@@ -6,7 +6,7 @@ import { GreetingComponent } from "./components/greeting/greeting.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent, HeaderComponent, GreetingComponent],
+  imports: [RouterOutlet, HomeComponent, HeaderComponent],
   styleUrls: ['./app.component.css'],
   template: `
    <app-header/>
