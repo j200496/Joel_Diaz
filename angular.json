@@ -58,6 +58,7 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
+              "baseHref": "/Joel_Diaz/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
