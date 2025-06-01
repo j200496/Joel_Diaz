@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { GreetingComponent } from '../components/greeting/greeting.component';
 import { AdviceService } from '../advice.service';
+import { JokeService } from '../joke.service';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,10 @@ import { AdviceService } from '../advice.service';
 })
 export class HomeComponent {
  private adviceService = inject(AdviceService);
+ private jokeService = inject(JokeService);
   ad: string = "";
-  other: string = "";
-  another: string = "";
+  part1: string = "";
+  part2: string = "";
   constructor() {
    // this.getNewAdvice();
   }
@@ -21,14 +23,15 @@ export class HomeComponent {
   }
     clearjoke(){
      // this.ad = '';
-      this.other ='';
-      this.another ='';
+      this.part1 ='';
+      this.part2 ='';
     }
-  getnewjoke(){
-    this.adviceService.getjjoke().subscribe(data =>{
-      this.other = data.setup;
-      this.another = data.punchline;
-    })
+getnewjoke(){
+  this.jokeService.getjokes().subscribe(jokes => {
+   this.part1 = jokes.setup;
+   this.part2 = jokes.punchline;
+  })
+
   }
   getNewAdvice() {
     this.adviceService.getadvice().subscribe((datos) => {
