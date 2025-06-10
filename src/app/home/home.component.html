@@ -338,23 +338,25 @@
         </article>
         <section>
            <div class="row justify-content-center">
-        <div class="col-lg-1 col-md-3 col-3">
-          <h3 class="text-success mt-4" id="contact">Contact</h3>
+        <div class="col-lg-2 col-md-3 col-5">
+          <h3 class="text-success mt-4" id="contact">Contact me</h3>
         </div>
       </div>
       <div class="row justify-content-center">
          <div class="col-lg-8">
-          <form action="submit">
-            <input type="text" placeholder="Name" class="form-control" required>
-            <input type="email" class="form-control mt-3" name="" id="" placeholder="Email" required>
-            <textarea name="" class="form-control mt-3" placeholder="Message" id="" required></textarea>
-            <button class="btn btn-primary w-100 mt-3">Send</button>
+          <form [formGroup]="frm" action="https://formsubmit.co/joeltechrd@gmail.com" method="post">            
+                  <input type="hidden" name="_captcha" value="false">
+            <input type="text" formControlName="name" placeholder="Name" class="form-control" required>
+            <input type="email" formControlName="email" class="form-control mt-3" name="" id="" placeholder="Email" required>
+            <textarea name="" formControlName="text" class="form-control mt-3" placeholder="Message" id="" required></textarea> 
+            <input type="hidden" value="{{route}}" name="" id="">         
+            <button class=" btn btn-primary w-100 mt-3" type="submit" [disabled]="true">Send</button>
           </form>
         </div>
       </div>
         </section>
       </section>
-      <div class="row justify-content-center mt-3" data-aos="flip-left">
+      <div class="row justify-content-center mt-5" data-aos="flip-left">
         <div class="col-lg-2 col-md-2">
           <a
             class="btn btn-success rounded-circle"
@@ -434,7 +436,6 @@
           ></a>
         </div>
       </div>
-
       <section id="resume">
         <div class="row justify-content-center">
           <h5 class="text-success mt-4">
@@ -460,10 +461,12 @@
     </footer>
   </div>
   <section class="bg-success mt-3">
-    <div class="row justify-content-center">
-      <div class="col-lg-2 col-7">
-        <p class="text-white mt-2">Developed by JoelTechrd</p>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+      <div class="col-lg-2 col-6">
+        <p class="text-white mt-2">All rights reserved &#169;</p>
       </div>
+    </div>
     </div>
   </section>
 </body>

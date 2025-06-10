@@ -1,0 +1,19 @@
+ body {
+      background-color: #ffffff;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .card {
+      background-color: #5f80aa;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 255, 170, 0.3);
+    }
+    .btn-home {
+      margin-top: 20px;
+    }

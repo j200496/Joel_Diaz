@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Route, Router, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { GreetingComponent } from "./components/greeting/greeting.component";
+import { ThanksComponent } from "./thanks/thanks.component";
 
 @Component({
   selector: 'app-root',
@@ -29,4 +30,7 @@ import { GreetingComponent } from "./components/greeting/greeting.component";
 export class AppComponent {
   title = 'angular';
   test = 'prueba';
+  /**
+   *
+   */
 }
