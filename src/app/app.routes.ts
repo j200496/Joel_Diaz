@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { ThanksComponent } from './thanks/thanks.component';
 import { MainlayoutComponent } from './mainlayout/mainlayout.component';
 import { EmptyComponent } from './empty/empty.component';
+import { provideRouter, withEnabledBlockingInitialNavigation, withRouterConfig } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
@@ -13,9 +14,4 @@ export const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-  {
-    path: 'thanks',
-    component: ThanksComponent
-  },
-
 ];

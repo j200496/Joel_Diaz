@@ -1,4 +1,13 @@
-<body>
+<body [ngClass]="ischecked == true ? 'bg-dark' : 'bg-light'">
+  <div class="row justify-content-end">
+   <div class="col-5 col-md- col-lg-2">
+    <div class="form-check form-switch mt-3">
+  <input class="form-check-input fs-4"[(ngModel)]="ischecked" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label text-success fw-bold mt-1" for="flexSwitchCheckDefault">Dark mode</label>
+</div>
+
+   </div>
+  </div>
   <a href="#navmenu"><i class="bi bi-arrow-up-circle-fill" id="arrow"></i></a>
   <section>
     <div class="container">
@@ -15,8 +24,8 @@
           <img class="img-fluid" src="images/picsinf.png" width="350" alt="" />
         </div>
         <div class="col-8 col-lg-8 col-md-12">
-          <h3 class="text-success">About me</h3>
-          <p class="lead" id="about">
+          <h3 class="text-success mt-3">About me</h3>
+          <p class="lead" id="about" [ngClass]="ischecked == true? 'text-success': ''">
             Hi! I'm a Software Engineering student in my final year with
             hands-on experience building fullstack solutions and frontend web
             pages. I have a strong foundation in C#, SQL Server, and Angular. I
@@ -336,7 +345,7 @@
             </div>
           </div>
         </article>
-        <section>
+        <section id="contact">
            <div class="row justify-content-center">
         <div class="col-lg-2 col-md-3 col-5">
           <h3 class="text-success mt-4" id="contact">Contact me</h3>
@@ -348,8 +357,8 @@
                   <input type="hidden" name="_captcha" value="false">
             <input type="text" formControlName="name" placeholder="Name" class="form-control" required>
             <input type="email" formControlName="email" class="form-control mt-3" name="" id="" placeholder="Email" required>
-            <textarea name="" formControlName="text" class="form-control mt-3" placeholder="Message" id="" required></textarea> 
-            <input type="hidden" value="{{route}}" name="" id="">         
+            <textarea name="" formControlName="Text" class="form-control mt-3" placeholder="Message" id="" required></textarea> 
+            <input type="hidden" value="" name="" id="">         
             <button class=" btn btn-primary w-100 mt-3" type="submit" [disabled]="true">Send</button>
           </form>
         </div>
@@ -436,7 +445,7 @@
           ></a>
         </div>
       </div>
-      <section id="resume">
+      <section id="contact">
         <div class="row justify-content-center">
           <h5 class="text-success mt-4">
             Download my resume
@@ -470,3 +479,4 @@
     </div>
   </section>
 </body>
+<router-outlet></router-outlet>

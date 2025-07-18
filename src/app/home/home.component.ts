@@ -1,15 +1,16 @@
-import { Component, inject } from '@angular/core';
+import { BootstrapOptions, Component, inject } from '@angular/core';
 import { GreetingComponent } from '../components/greeting/greeting.component';
 import { AdviceService } from '../advice.service';
 import { JokeService } from '../joke.service';
 import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { ThanksComponent } from '../thanks/thanks.component';
 import swal from 'sweetalert2'
-import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ReactiveFormsModule,RouterOutlet],
+  imports: [ReactiveFormsModule,RouterOutlet,CommonModule,FormsModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'] 
 })
@@ -20,8 +21,9 @@ export class HomeComponent {
   part1: string = "";
   part2: string = "";
   thanks: string = ''
+  background: string = 'bg-light';
+  ischecked: boolean = false;
   private thank = inject(Router)
-  public route = this.thank.navigate(['/thanks'])
   private readonly reactiveform = inject(FormBuilder)
   public frm: FormGroup = this.reactiveform.group({
     email: new FormControl("",[Validators.required]),

@@ -3,9 +3,16 @@
     <a class="nav-link active text-white" href="index.html">
        <p class="text-white fw-bold mt-2">{{title()}}</p>   
       </a>
-      <button class="navbar-toggler bg-success" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navmenu"
+        aria-controls="navmenu"
+        aria-expanded="false"
+        aria-label="Abrir menú de navegación">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav ms-auto">
          <li class="nav-item">
