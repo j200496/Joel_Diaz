@@ -1,11 +1,10 @@
-<body [ngClass]="ischecked == true ? 'bg-dark' : 'bg-light'">
+<div class="container-fluid" [ngClass]="ischecked == true ? 'bg-dark' : 'bg-light'">
   <div class="row justify-content-end">
    <div class="col-5 col-md- col-lg-2">
     <div class="form-check form-switch mt-3">
   <input class="form-check-input fs-4"[(ngModel)]="ischecked" type="checkbox" role="switch" id="flexSwitchCheckDefault">
   <label class="form-check-label text-success fw-bold mt-1" for="flexSwitchCheckDefault">Dark mode</label>
 </div>
-
    </div>
   </div>
   <a href="#navmenu"><i class="bi bi-arrow-up-circle-fill" id="arrow"></i></a>
@@ -65,7 +64,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-5">
           <p class="text-primary fs-5 fst-italic mt-2">{{ ad }}</p>
-          <button class="btn btn-success w-100" (click)="getNewAdvice()">
+          <button class="btn btn-success w-100 rounded-5" (click)="getNewAdvice()">
             Click for new advice
           </button>
         </div>
@@ -339,7 +338,7 @@
               <p class="text-primary fs-5 fst-italic mt-2">
                 {{ part1 }} {{ part2 }}
               </p>
-              <button class="btn btn-success w-100" (click)="getnewjoke()">
+              <button class="btn btn-success w-100 rounded-5" (click)="getnewjoke()">
                 Click for new joke
               </button>
             </div>
@@ -355,17 +354,24 @@
          <div class="col-lg-8">
           <form [formGroup]="frm" action="https://formsubmit.co/joeltechrd@gmail.com" method="post">            
                   <input type="hidden" name="_captcha" value="false">
-            <input type="text" formControlName="name" placeholder="Name" class="form-control" required>
-            <input type="email" formControlName="email" class="form-control mt-3" name="" id="" placeholder="Email" required>
-            <textarea name="" formControlName="Text" class="form-control mt-3" placeholder="Message" id="" required></textarea> 
+            <input type="text" formControlName="name" placeholder="Name" class="form-control rounded-5" required>
+            <input type="email" formControlName="email" class="form-control mt-3 rounded-5" name="" id="" placeholder="Email" required>
+            <textarea name="" formControlName="Text" class="form-control mt-3 rounded-3 " placeholder="Message" id="" required></textarea> 
             <input type="hidden" value="" name="" id="">         
-            <button class=" btn btn-primary w-100 mt-3" type="submit" [disabled]="true">Send</button>
+            <button class=" btn btn-primary w-100 mt-3 mb-3 rounded-5" type="submit" [disabled]="true">Send</button>
           </form>
         </div>
       </div>
         </section>
-      </section>
-      <div class="row justify-content-center mt-5" data-aos="flip-left">
+      </section>     
+    </div>
+  </section>
+</div>
+<section class="bg-success">
+    <div class="container-fluid">
+    <footer class="">
+      <div class="row justify-content-center">
+    <div class="row justify-content-center mt-5 bg-success" data-aos="flip-left">
         <div class="col-lg-2 col-md-2">
           <a
             class="btn btn-success rounded-circle"
@@ -444,39 +450,32 @@
             ><i class="bi bi-github fs-4"></i
           ></a>
         </div>
+      </div>  
       </div>
       <section id="contact">
         <div class="row justify-content-center">
-          <h5 class="text-success mt-4">
+          <h5 class="text-white mt-4">
             Download my resume
-            <a href="/src/assets/My-resume.docx" download>here </a>
+            <a class="text-white" href="/src/assets/My-resume.docx" download>here </a>
           </h5>
         </div>
       </section>
-    </div>
-  </section>
-  <div class="container">
-    <footer>
       <div class="row justify-content-start mt-4">
         <div class="col-lg-8 col-12 col-md-6">
-          <i class="bi bi-geo-alt-fill fs-4 text-success">
+          <i class="bi bi-geo-alt-fill fs-4 text-white">
             Santo Domingo, Dominican Republic</i
           >
         </div>
         <div class="col-lg-4 col-12 col-md-6">
-          <i class="bi bi-phone fs-4 text-success"> Call me at 849-357-7214</i>
+          <i class="bi bi-phone fs-4 text-white"> Call me at 849-357-7214</i>
         </div>
       </div>
-    </footer>
-  </div>
-  <section class="bg-success mt-3">
-    <div class="container-fluid">
+
       <div class="row justify-content-center">
-      <div class="col-lg-2 col-6">
-        <p class="text-white mt-2">All rights reserved &#169;</p>
+      <div class="col-lg-4 col-12">
+        <p class="text-white mt-2 lead">Develoed by JoelTechRd--All rights reserved &#169;</p>
       </div>
     </div>
+    </footer>
     </div>
   </section>
-</body>
-<router-outlet></router-outlet>

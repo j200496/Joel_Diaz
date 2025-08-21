@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-empty',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './empty.component.html',
   styleUrl: './empty.component.css'
 })

@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ReactiveFormsModule,RouterOutlet,CommonModule,FormsModule],
+  imports: [ReactiveFormsModule,CommonModule,FormsModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'] 
 })

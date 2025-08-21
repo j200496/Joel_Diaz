@@ -6,12 +6,10 @@ import { EmptyComponent } from './empty/empty.component';
 import { provideRouter, withEnabledBlockingInitialNavigation, withRouterConfig } from '@angular/router';
 export const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: '',component: MainlayoutComponent
   },
   {
-    path: 'home',
-    component: HomeComponent
-  },
+    path: 'layout',
+    component: MainlayoutComponent
+  }
 ];
