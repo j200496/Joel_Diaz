@@ -7,29 +7,14 @@ import { ThanksComponent } from "./thanks/thanks.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent, HeaderComponent],
+  imports: [RouterOutlet],
   styleUrls: ['./app.component.css'],
   template: `
-   <app-header/>
-   <app-home/>
     <router-outlet />`,
-    styles:[
-     `
-     h1{
-      color: blue;
-     }
-     p {
-       color: red;
-}
-     `
-    
-      
-    ],
     
 })
 export class AppComponent {
-  title = 'angular';
-  test = 'prueba';
+
   /**
    *
    */

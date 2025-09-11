@@ -7,10 +7,11 @@ import { ThanksComponent } from '../thanks/thanks.component';
 import swal from 'sweetalert2'
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../components/header/header.component";
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule,FormsModule],
+  imports: [ReactiveFormsModule, CommonModule, FormsModule, HeaderComponent,RouterOutlet],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'] 
 })

@@ -8,6 +8,5 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-title = signal('My portafolio');
-test = signal('Contact');
+
 }

@@ -1,0 +1,11 @@
+/* Animación de slide para el menú */
+.slide-animate.collapse:not(.show) {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+.slide-animate.collapse.show {
+  height: auto;
+  transition: height 0.35s ease;
+}
