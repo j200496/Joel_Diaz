@@ -1,4 +1,4 @@
-import { BootstrapOptions, Component, inject } from '@angular/core';
+import { BootstrapOptions, Component, inject, OnInit } from '@angular/core';
 import { GreetingComponent } from '../components/greeting/greeting.component';
 import { AdviceService } from '../advice.service';
 import { JokeService } from '../joke.service';
@@ -15,7 +15,7 @@ import { HeaderComponent } from "../components/header/header.component";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'] 
 })
-export class HomeComponent {
+export class HomeComponent  implements OnInit{
  private adviceService = inject(AdviceService);
  private jokeService = inject(JokeService);
   ad: string = "";
@@ -24,6 +24,7 @@ export class HomeComponent {
   thanks: string = ''
   background: string = 'bg-light';
   ischecked: boolean = false;
+  projects: number = 0;
   private thank = inject(Router)
   private readonly reactiveform = inject(FormBuilder)
   public frm: FormGroup = this.reactiveform.group({
@@ -31,6 +32,15 @@ export class HomeComponent {
      name: new FormControl("",Validators.required),
      Text: new FormControl("",Validators.required)
   })
+
+  ngOnInit(): void {
+    if(this.projects > 25) return;
+ setInterval(() => {
+     if(this.projects < 25){
+      this.projects ++;
+     }
+    },50)
+  }
   clearadvice(){
    this.ad = '';
   }
