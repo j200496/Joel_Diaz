@@ -1,5 +1,4 @@
-import { BootstrapOptions, Component, inject, OnInit } from '@angular/core';
-import { GreetingComponent } from '../components/greeting/greeting.component';
+import { Component, inject, OnInit } from '@angular/core';
 import { AdviceService } from '../advice.service';
 import { JokeService } from '../joke.service';
 import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
