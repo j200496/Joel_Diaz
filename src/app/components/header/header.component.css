@@ -9,3 +9,6 @@
   height: auto;
   transition: height 0.35s ease;
 }
+a{
+  cursor: pointer;
+}
